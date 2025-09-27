@@ -8,7 +8,7 @@
 		"$HOME/.config/waybar/UserModules",
 	],
 	"layer": "top",
-	"output": "eDP-1",
+	"output": "DP-2",
 	//"mode": "dock",
 	"exclusive": true,
 	"passthrough": false,
@@ -25,7 +25,6 @@
 		"group/laptop",
 	],
 	"modules-center": [
-		"custom/cava_mviz",
 		"custom/separator#blank",
 		"group/notify",
 		"custom/separator#line",
