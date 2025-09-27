@@ -1,0 +1,53 @@
+/* Waybar Starter Style for Hyprland */
+* {
+  font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 24px;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 12px;
+  border: 1px solid #44475a;
+  color: #e0e0e0;
+  padding: 4px 8px;
+}
+
+/* Module styles */
+#workspaces button {
+  padding: 0 8px;
+  color: #a6e3a1;
+  background: transparent;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#workspaces button.active {
+  background: #313244;
+  color: #f38ba8;
+}
+
+#clock {
+  color: #89b4fa;
+  padding: 0 16px;
+}
+
+#cpu, #memory {
+  color: #fab387;
+  padding: 0 8px;
+}
+
+#network {
+  color: #f9e2af;
+  padding: 0 8px;
+}
+
+#tray {
+  padding: 0 8px;
+}
+
+/* Optional: Add hover effect */
+#workspaces button:hover {
+  background: #45475a;
+  color: #f5e0dc;
+}
