@@ -1,0 +1,23 @@
+{
+	"group/motherboard": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"memory",
+			"temperature",
+			"disk",
+		]
+	},
+	"group/audio": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 500,
+			"children-class": "pulseaudio",
+			"transition-left-to-right": true
+		},
+		"modules": [
+			"pulseaudio",
+			"pulseaudio#microphone",
+		]
+	},
+}
