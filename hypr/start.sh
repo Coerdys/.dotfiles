@@ -8,3 +8,6 @@ nm-applet --indicator &
 waybar &
 
 nextcloud &
+
+swaync &
+

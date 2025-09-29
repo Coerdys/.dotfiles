@@ -23,6 +23,7 @@
 		"network#speed",
 	],
 	"modules-center": [
+		"custom/notifications",
 		"custom/separator#line",
 		"hyprland/workspaces#rw",
 		"clock",

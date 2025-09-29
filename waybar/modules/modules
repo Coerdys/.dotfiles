@@ -92,10 +92,12 @@
 		"format-alt": "{:%a %b %d, %G}",
 		"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 	},
-	"clock#5": {
-		"format": "{:%a %d | %H:%M}", // 24H
-		"format-alt": "{:%A, %d %B, %Y (%R)}",
-		"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+	"custom/notifications": {
+		"format": "󰍛",
+		"exec": "/home/corby/.config/scripts/notifications.sh",
+		"on-click": "sleep 0.1; swaync-client -t -sw",
+		"on-click-right": "swaync-client -C",
+		"interval": 5,
 	},
 	"cpu": {
 		"format": "{usage}% 󰍛",
