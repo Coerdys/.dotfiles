@@ -56,7 +56,7 @@
     isNormalUser = true;
     description = "corby";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" "input" ];
     packages = with pkgs; [];
   };
 
@@ -71,6 +71,14 @@
     kitty
     # neovim
     helix
+    xsel # Needed for helix to copy things to clipboard
+    swaynotificationcenter # notification manager
+    # dunst # alternative notification manager
+    libnotify # dunst depends on this
+    swappy # screenshot app
+    wireplumber
+    hypridle
+    hyprlock
     ranger # file manager
     discord
     keepassxc # password manager
@@ -183,7 +191,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.theme = "breeze";
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
+  services.displayManager.gdm.wayland = true;
   services.displayManager.sessionPackages = with pkgs; [
     hyprland
   ];

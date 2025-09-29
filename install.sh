@@ -12,6 +12,8 @@ for ITEM in * .*; do
     [[ "$ITEM" == "." || "$ITEM" == ".." ]] && continue
     # Skip the script itself, if running from the same folder
     [[ "$ITEM" == "${0##*/}" ]] && continue
+    # Skip nixos config linking
+    [[ "$ITEM" == "nixos" ]] && continue
 
     TARGET="$CONFIG_DIR/$ITEM"
 
