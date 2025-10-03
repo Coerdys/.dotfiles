@@ -3,7 +3,7 @@
 notifications=$(swaync-client -c)
 
 if [ "$notifications" -gt 0 ]; then
-  echo ": $notifications"
+  echo "  $notifications"
 else
-  echo ""
+  echo " "
 fi

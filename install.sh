@@ -2,27 +2,31 @@
 
 set -e
 
-# Ensure ~/.config exists
 CONFIG_DIR="$HOME/.config"
+BACKUP_DIR="$HOME/.config.bak"
+SRC_DIR="$(pwd)/config"
 mkdir -p "$CONFIG_DIR"
+mkdir -p "$BACKUP_DIR"
 
-# Loop through all files and directories in the current directory, except the script itself
-for ITEM in * .*; do
-    # Skip . and ..
-    [[ "$ITEM" == "." || "$ITEM" == ".." ]] && continue
-    # Skip the script itself, if running from the same folder
-    [[ "$ITEM" == "${0##*/}" ]] && continue
-    # Skip nixos config linking
-    [[ "$ITEM" == "nixos" ]] && continue
+for ITEM in "$SRC_DIR"/* "$SRC_DIR"/.[!.]* "$SRC_DIR"/..?*; do
+    BASENAME="$(basename "$ITEM")"
+    [ ! -e "$ITEM" ] && continue
 
-    TARGET="$CONFIG_DIR/$ITEM"
+    # Skip unwanted files/folders
+    [[ "$BASENAME" == "nixos" ]] && continue
+    [[ "$BASENAME" == ".git" ]] && continue
+    [[ "$BASENAME" == "README.md" ]] && continue
 
-    # Remove existing file/folder/symlink in ~/.config
+    TARGET="$CONFIG_DIR/$BASENAME"
+    BACKUP="$BACKUP_DIR/$BASENAME"
+
+    # If target exists, move it to backup
     if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
-        rm -rf "$TARGET"
+        echo "Backing up $TARGET to $BACKUP"
+        mv "$TARGET" "$BACKUP"
     fi
 
     # Symlink to ~/.config
-    ln -s "$(pwd)/$ITEM" "$TARGET"
-    echo "Symlinked $ITEM -> $TARGET"
+    ln -s "$ITEM" "$TARGET"
+    echo "Symlinked $BASENAME -> $TARGET"
 done

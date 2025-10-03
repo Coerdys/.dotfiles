@@ -11,3 +11,5 @@ nextcloud &
 
 swaync &
 
+hypridle &
+

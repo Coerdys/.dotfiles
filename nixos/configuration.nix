@@ -56,7 +56,7 @@
     isNormalUser = true;
     description = "corby";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "gamemode" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" "input" "openrazer" ];
     packages = with pkgs; [];
   };
 
@@ -66,14 +66,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     kitty
-    # neovim
     helix
     xsel # Needed for helix to copy things to clipboard
     swaynotificationcenter # notification manager
-    # dunst # alternative notification manager
+    wl-clipboard
     libnotify # dunst depends on this
     swappy # screenshot app
     wireplumber
@@ -89,6 +87,7 @@
     btop # task manager
     nwg-displays # display management
     pavucontrol # gui for audio control
+    pamixer # cli for audio control
     git
     atlauncher
     prismlauncher
@@ -100,6 +99,13 @@
     go
 
     android-studio
+
+    sddm-astronaut
+
+    brightnessctl
+
+    openrazer-daemon
+    polychromatic
 
     ## language servers
     gopls
@@ -155,6 +161,7 @@
   };
 
   hardware = {
+    openrazer.enable = true;
     graphics.enable = true;
     nvidia.modesetting.enable = true;
   };
@@ -171,8 +178,10 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true;
+    # jack.enable = true;
   };
+
+  services.hypridle.enable = true;
 
   services.dbus.enable = true; # Needed for mpris in waybar to work (sound)
 
@@ -188,10 +197,14 @@
   services.udisks2.enable = true;
 
   # sddm
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme = "breeze";
+  services.displayManager = {
+    enable = true;
+    sddm = {
+      enable = true;
+      theme = "elarun";
+    };
+  };
   services.xserver.enable = true;
-  services.displayManager.gdm.wayland = true;
   services.displayManager.sessionPackages = with pkgs; [
     hyprland
   ];

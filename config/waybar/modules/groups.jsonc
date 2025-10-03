@@ -6,15 +6,11 @@
 			"memory",
 			"temperature",
 			"disk",
+			"network#speed"
 		]
 	},
 	"group/audio": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 500,
-			"children-class": "pulseaudio",
-			"transition-left-to-right": true
-		},
+		"orientation": "horizontal",
 		"modules": [
 			"pulseaudio",
 			"pulseaudio#microphone",

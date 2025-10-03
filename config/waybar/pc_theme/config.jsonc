@@ -1,0 +1,38 @@
+// ### corby ### //
+{
+	"include": [
+		"$HOME/.config/waybar/modules/modules.jsonc",
+		"$HOME/.config/waybar/modules/workspaces.jsonc",
+		"$HOME/.config/waybar/modules/separators.jsonc",
+		"$HOME/.config/waybar/modules/groups.jsonc",
+	],
+	"layer": "top",
+	"output": "DP-2",
+	//"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 3,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 3,
+	"margin-left": 8,
+	"margin-right": 8,
+	"modules-left": [
+		"group/motherboard",
+	],
+	"modules-center": [
+		"custom/notifications",
+		"custom/separator#line",
+		"hyprland/workspaces#rw",
+		"clock",
+		"custom/separator#line",
+		"idle_inhibitor",
+	],
+	"modules-right": [
+		"cava",
+		"group/audio",
+		"custom/separator#line",
+		"tray",
+	]
+}
