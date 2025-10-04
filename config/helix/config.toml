@@ -1,1 +1,4 @@
 theme = "mytheme"
+
+[editor]
+auto-format = true
