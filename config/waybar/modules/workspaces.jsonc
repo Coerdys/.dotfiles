@@ -13,7 +13,7 @@
 		},
 		"format": "{icon} {windows}",
 		"format-window-separator": " ",
-		"window-rewrite-default": " ",
+		"window-rewrite-default": "",
 		"window-rewrite": {
 			"title<.*amazon.*>": " ",
 			"title<.*reddit.*>": " ",
@@ -25,7 +25,7 @@
 			"class<brave-browser>": "🦁 ",
 			"class<tor browser>": " ",
 			"class<firefox-developer-edition>": "🦊 ",
-			"class<kitty|konsole>": " ",
+			"class<kitty|konsole>": "󰆍 ",
 			"class<kitty-dropterm>": " ",
 			"class<com.mitchellh.ghostty>": " ",
 			"class<org.wezfurlong.wezterm>": " ",

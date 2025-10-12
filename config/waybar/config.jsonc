@@ -1,4 +1,3 @@
-// ### corby ### //
 {
 	"include": [
 		"$HOME/.config/waybar/modules/modules.jsonc",

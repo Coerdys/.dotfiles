@@ -6,7 +6,8 @@
 			"memory",
 			"temperature",
 			"disk",
-			"network#speed"
+			"battery",
+			"network"
 		]
 	},
 	"group/audio": {
