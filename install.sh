@@ -8,6 +8,10 @@ SRC_DIR="$(pwd)/config"
 mkdir -p "$CONFIG_DIR"
 mkdir -p "$BACKUP_DIR"
 
+# Symlink .zshrc
+mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+ln -sf "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
+
 for ITEM in "$SRC_DIR"/* "$SRC_DIR"/.[!.]* "$SRC_DIR"/..?*; do
     BASENAME="$(basename "$ITEM")"
     [ ! -e "$ITEM" ] && continue
@@ -30,3 +34,25 @@ for ITEM in "$SRC_DIR"/* "$SRC_DIR"/.[!.]* "$SRC_DIR"/..?*; do
     ln -s "$ITEM" "$TARGET"
     echo "Symlinked $BASENAME -> $TARGET"
 done
+
+# Install apps
+
+# Fonts
+if [ ! -d "$HOME/.local/share/fonts/JetBrainsMonoNerd" ]; then
+    rm -f JetBrainsMono.zip
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+    mkdir -p ~/.local/share/fonts/JetBrainsMonoNerd
+    unzip JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMonoNerd
+    rm JetBrainsMono.zip
+else
+    echo "JetBrainsMono already installed"
+fi
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "Oh my zsh not found. Installing..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+else
+    echo "Oh my zsh already installed"
+fi

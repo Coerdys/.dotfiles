@@ -1,10 +1,3 @@
-# Fonts
-rm JetBrainsMono.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
-mkdir -p ~/.local/share/fonts/JetBrainsMonoNerd
-unzip JetBrainsMono.zip -d ~/.local/share/fonts/JetBrainsMonoNerd
-rm JetBrainsMono.zip
-
 dnf copr enable erikreider/SwayNotificationCenter -y
 dnf copr enable solopasha/hyprland -y
 dnf copr enable errornointernet/packages -y
@@ -32,7 +25,3 @@ dnf install pamixer -y
 dnf install pavucontrol -y
 dnf install ulauncher -y
 dnf install hyprland-qtutils -y
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
