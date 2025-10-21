@@ -11,6 +11,7 @@ mkdir -p "$BACKUP_DIR"
 # Symlink .zshrc
 mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
 ln -sf "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
+ln -sf "$(pwd)/zsh/pokemon-go-colorscripts" "$HOME/pokemon-go-colorscripts"
 
 for ITEM in "$SRC_DIR"/* "$SRC_DIR"/.[!.]* "$SRC_DIR"/..?*; do
     BASENAME="$(basename "$ITEM")"
