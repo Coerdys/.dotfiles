@@ -1,2 +1,8 @@
 
-@theme "/nix/store/za31vpq7l1ypzhyp7zpnl1i9mxr7csgs-rofi-1.7.9+wayland1/share/rofi/themes/Monokai.rasi"
+//@theme "/home/corby/.local/share/rofi/themes/spotlight-dark.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+
+@theme "/home/corby/.local/share/rofi/themes/spotlight-dark.rasi"
