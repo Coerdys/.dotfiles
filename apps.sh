@@ -23,7 +23,7 @@ dnf install nwg-shell -y
 dnf install fzf -y
 dnf install pamixer -y
 dnf install pavucontrol -y
-dnf install ulauncher -y
+# dnf install ulauncher -y
 dnf install hyprland-qtutils -y
 dnf install keepassxc -y
 dnf install walker -y
