@@ -6,8 +6,6 @@
 		"$HOME/.config/waybar/modules/groups.jsonc",
 	],
 	"layer": "top",
-	// "output": "DP-2",
-	// "mode": "dock",
 	"exclusive": true,
 	"passthrough": false,
 	"position": "top",

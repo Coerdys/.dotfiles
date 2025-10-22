@@ -26,3 +26,4 @@ dnf install pavucontrol -y
 dnf install hyprland-qtutils -y
 dnf install keepassxc -y
 dnf install rofi-wayland -y
+dnf install cava -y
