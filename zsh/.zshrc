@@ -41,11 +41,14 @@ alias server='ssh corby@192.168.178.5 -p 1337'
 alias coding='cd /mnt/data/files/coding/'
 alias lrz='ssh porc@lxhalle.in.tum.de'
 alias c='clear'
+alias py='python'
+alias uni='cd /mnt/data/files/coding/uni'
 
 export SYSTEMC_HOME=/usr/local/bin/systemc
 export GOPATH=$HOME/go # Or wherever your GOPATH is set
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.cargo/bin
+export PATH="$HOME/.local/bin:$PATH"
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH

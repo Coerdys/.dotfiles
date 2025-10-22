@@ -7,7 +7,6 @@
 			"temperature",
 			"disk",
 			"battery",
-			"network"
 		]
 	},
 	"group/audio": {

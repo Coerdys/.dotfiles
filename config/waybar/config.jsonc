@@ -27,7 +27,8 @@
 		"idle_inhibitor",
 	],
 	"modules-right": [
-		"cava",
+		"network",
+		"custom/separator#line",
 		"group/audio",
 		"custom/separator#line",
 		"tray",

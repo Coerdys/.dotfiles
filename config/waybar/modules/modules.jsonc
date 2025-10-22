@@ -197,7 +197,7 @@
 		"tooltip-format-ethernet": "{ifname} 󰌘",
 		"tooltip-format-disconnected": "󰌙 Disconnected",
 		"format-alt": "{icon} {ipaddr}",
-		"align": 0,
+		"align": 1,
 		"min-length": 24,
 		"max-length": 24,
 		"format-icons": [

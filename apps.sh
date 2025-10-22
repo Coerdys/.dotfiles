@@ -27,3 +27,6 @@ dnf install hyprland-qtutils -y
 dnf install keepassxc -y
 dnf install rofi-wayland -y
 dnf install cava -y
+
+dnf install python3-lsp-server -y
+dnf install clangd -y
