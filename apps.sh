@@ -27,6 +27,12 @@ dnf install hyprland-qtutils -y
 dnf install keepassxc -y
 dnf install rofi-wayland -y
 dnf install cava -y
+dnf install swappy grim slurp -y # screenshots
+dnf install bluez bluez-tools blueman python3-cairo -y # bluetooth
+dnf install gromit-mpx -y
+dnf install discord -y
+dnf install steam -y
 
+# language servers
 dnf install python3-lsp-server -y
 dnf install clangd -y
